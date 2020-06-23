@@ -1,0 +1,73 @@
+.App {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 342px;
+  height: 680px;
+
+  .screen {
+    position: absolute;
+    top: 20px;
+    left: 23px;
+    width: 297px;
+    height: 639px;
+    background-size: 297px 639px;
+
+    &.screen-1 {
+      background-image: url("https://www.apple.com/v/home/et/images/wwdc-takeover/ios/ios_screen_1__buw32djcyiuu_large_2x.jpg");
+    }
+
+    &.screen-2 {
+      background-image: url("https://www.apple.com/v/home/et/images/wwdc-takeover/ios/ios_screen_2__bs9j4joujk1y_large_2x.jpg");
+    }
+
+    &.screen-3 {
+      background-image: url("https://www.apple.com/v/home/et/images/wwdc-takeover/ios/ios_screen_3__c6wu2w2sgrcm_large_2x.jpg");
+    }
+
+    &.screen-4 {
+      background-image: url("https://www.apple.com/v/home/et/images/wwdc-takeover/ios/ios_screen_4__frdcawpgkqaa_large_2x.jpg");
+    }
+  }
+
+  .mask {
+    position: absolute;
+    width: 342px;
+    height: 680px;
+    mask-border: url("https://www.apple.com/v/home/et/images/wwdc-takeover/ios/ios_hardware_mask__fg8fiflqmhym_large.svg");
+
+    .frame {
+      width: 342px;
+      height: 680px;
+      background-size: 342px 680px;
+      background-image: url("https://www.apple.com/v/home/et/images/wwdc-takeover/ios/ios_hardware__dzbxvvgm6t4y_large.jpg");
+    }
+  }
+}
+
+.screen-transition {
+  .show-enter {
+    opacity: 0;
+  }
+
+  .show-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .show-exit {
+    opacity: 1;
+  }
+
+  .show-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+}
